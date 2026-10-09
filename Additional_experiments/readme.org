@@ -9,3 +9,23 @@
 | run_experiments_mistral.py       | Ministral-3-8B | Persuasion       | conclusion_change_mistral |
 | run_experiments_mistral_fetch.py | Ministral-3-8B | Network callback | fetch_mistral             |
 | run_experiments_mistral_fs.py    | Ministral-3-8B | Local disk write | fs-write_mistral          |
+
+
+For each model-attack combination, we used different forensic images. They varied slightly: some of them
+were controls, some contained the planted notes described in the paper, and some had variations of these notes.
+
+The following table presents the additional results that correspond to the three experiments presented in the paper:
+
+
+| Results file                                                | Model          | Attack            | Experiment described in the paper |
+|----------------------------+---------------------------------------------------------------------------------------------------------|
+| conclusion_change/conclusion_change_adv51-ex02.json         | Gemma-4-12B    | Persuasion        | Exp 1                             |
+| fetch/fetch_adv53-ex13.json                                 | Gemma-4-12B    | Network callback  | Exp 3                             |
+| fs-write/fs-write_adv52-ex10.json                           | Gemma-4-12B    | Local disk write  | Exp 2                             |
+| conclusion_change_gpt/conclusion_change_adv57-ex02.json     | gpt-oss-20B    | Persuasion        | Exp 1                             |
+| fetch_gpt/fetch_adv56-ex13.json                             | gpt-oss-20B    | Network callback  | Exp 3                             |
+| fs-write_gpt/fs-write_adv58-ex10.json                       | gpt-oss-20B    | Local disk write  | Exp 2                             |
+| conclusion_change_mistral/conclusion_change_adv54-ex02.json | Ministral-3-8B | Persuasion        | Exp 1                             |
+| fetch_mistral/fetch_adv59-ex13.json                         | Ministral-3-8B | Network callback  | Exp 3                             |
+| fs-write_mistral/fs-write_adv55-ex10.json                   | Ministral-3-8B | Local disk write  | Exp 2                             |
+
