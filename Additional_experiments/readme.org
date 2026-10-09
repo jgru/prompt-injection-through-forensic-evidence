@@ -1,3 +1,9 @@
+Each script runs inferences for a given model and attack. The generated texts (plus some test generations to control MCP availability)
+are then stored in JSON files.
+
+The following table shows the model-attack combination used in each script and the folder where the generated JSON files are saved:
+
+
 | Script                           | Model used     | Attack           | Output folder             |
 |----------------------------+---------------------------------------------------------------------|
 | run_experiments.py               | Gemma-4-12B    | Persuasion       | conclusion_change         |
@@ -11,8 +17,9 @@
 | run_experiments_mistral_fs.py    | Ministral-3-8B | Local disk write | fs-write_mistral          |
 
 
-For each model-attack combination, we used different forensic images. They varied slightly: some of them
-were controls, some contained the planted notes described in the paper, and some had variations of these notes.
+For each model-attack combination, we used different forensic images (up to 6 for Persuasion). They vary slightly; some of them are controls, some 
+contain the planted notes described in the paper, and some contain variations of these notes. While everything is accessible and interesting, only a
+handful of the JSON files contain results from the 3 experiments presented in the paper.
 
 The following table presents the additional results that correspond to the three experiments presented in the paper:
 
