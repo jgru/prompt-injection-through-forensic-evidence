@@ -1,0 +1,11 @@
+| Script                           | Model used     | Attack           | Output folder             |
+|----------------------------+---------------------------------------------------------------------|
+| run_experiments.py               | Gemma-4-12B    | Persuasion       | conclusion_change         |
+| run_experiments_fetch.py         | Gemma-4-12B    | Network callback | fetch                     |
+| run_experiments_fs.py            | Gemma-4-12B    | Local disk write | fs-write                  |
+| run_experiments_gpt.py           | gpt-oss-20B    | Persuasion       | conclusion_change_gpt     |
+| run_experiments_gpt_fetch.py     | gpt-oss-20B    | Network callback | fetch_gpt                 |
+| run_experiments_gpt_fs.py        | gpt-oss-20B    | Local disk write | fs-write_gpt              |
+| run_experiments_mistral.py       | Ministral-3-8B | Persuasion       | conclusion_change_mistral |
+| run_experiments_mistral_fetch.py | Ministral-3-8B | Network callback | fetch_mistral             |
+| run_experiments_mistral_fs.py    | Ministral-3-8B | Local disk write | fs-write_mistral          |
