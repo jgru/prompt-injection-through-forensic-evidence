@@ -71,6 +71,8 @@ the examiner chooses, not one the attacker controls.
   fetched the URL anyway.
 - Screen recording :: [[file:experiment-03/DF-LLM-prompt-injection-demo-3-web-fetch.mp4]]
 
+** Additional Experiments
+Data and code for additional experiments are stored in [[file:experiments-additional/]]. 
 * Summary
 
 All three attacks succeeded with =gemma-4-12b= in LM Studio. In supporting runs,
