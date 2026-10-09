@@ -1,5 +1,5 @@
 #+TITLE: Prompt Injection Through Forensic Evidence: Artifacts
-#+OPTIONS: toc:nil num:nil
+#+OPTIONS: toc:0 num:nil
 
 Artifacts for the paper /Prompt Injection Through Forensic Evidence: A Taxonomy
 and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital
