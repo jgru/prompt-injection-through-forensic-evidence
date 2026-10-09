@@ -10,6 +10,9 @@ the paper. Each image contained synthetic evidence and a planted plain-text note
 that tries to manipulate an LLM agent analyzing the image. The outcome is
 documented by screen recordings.
 
+Scripts and data for supporting runs (undertaken automatically using different models 
+and forensic images) are also made available in "Additional data".
+
 
 * Setup used in the paper
 
