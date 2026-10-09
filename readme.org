@@ -13,15 +13,16 @@ documented by screen recordings.
 
 * Setup used in the paper
 
-| Component                   | Version and settings                                                                                                         |
-|-----------------------------+------------------------------------------------------------------------------------------------------------------------------|
-| Host                        | Windows analyst workstation                                                                                                  |
-| Autopsy                     | 4.23.1, one case per image; ingest modules include Data Source Integrity, Keyword Search, and Picture Analyzer               |
-| Autopsy MCP server          | =autopsy-mcp-stdio.exe= over stdio; 18 read-only tools scoped to the open case. TODO: source link                            |
-| LM Studio                   | 0.4.23 as MCP client; tool permissions per tool, all set to "Ask" (default)                                                  |
-| Model                       | =google/gemma-4-12b=, Q4_K_M GGUF; model-card defaults, context window expanded (up to 98,304 tokens)                        |
-| Filesystem server (Exp. 2)  | [[https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem][server-filesystem]], scoped at launch to a single working folder |
-| Fetch server (Exp. 3)       | [[https://github.com/modelcontextprotocol/servers/tree/main/src/fetch][mcp/fetch]], with network access                                  |
+| Component                  | Version and settings                                                                                           |
+|----------------------------+----------------------------------------------------------------------------------------------------------------|
+| Host                       | Windows analyst workstation                                                                                    |
+| Autopsy                    | 4.23.1, one case per image; ingest modules include Data Source Integrity, Keyword Search, and Picture Analyzer |
+| Autopsy MCP server         | =autopsy-mcp-stdio.exe= over stdio; 18 read-only tools scoped to the open case.                                |
+| LM Studio                  | 0.4.23 as MCP client; tool permissions per tool, all set to "Ask" (default)                                    |
+| Model                      | =google/gemma-4-12b=, Q4_K_M GGUF; model-card defaults, context window expanded (up to 98,304 tokens)          |
+| Filesystem server (Exp. 2) | [[https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem][server-filesystem]], scoped at launch to a single working folder                                                 |
+| Fetch server (Exp. 3)      | [[https://github.com/modelcontextprotocol/servers/tree/main/src/fetch][mcp/fetch]], with network access                                                                                 |
+
 
 The Autopsy MCP server is read-only, so Experiments 2 and 3 work only when
 the examiner attaches a filesystem or fetch server. This is a configuration
