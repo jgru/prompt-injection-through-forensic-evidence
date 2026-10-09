@@ -14,7 +14,7 @@ Scripts and data for supporting runs (undertaken automatically using different m
 and forensic images) are also made available in "Additional_experiments".
 
 
-* Setup used in the paper
+* Setup used for the experiments in the paper
 
 | Component                  | Version and settings                                                                                           |
 |----------------------------+----------------------------------------------------------------------------------------------------------------|
