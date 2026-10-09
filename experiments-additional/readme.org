@@ -34,13 +34,13 @@ The following table presents the additional results that correspond to the three
 
 | Results file                                                | Model          | Attack            | Paper experiment |
 |----------------------------+----------------------------------------------------------------------------------------|
-| conclusion_change/conclusion_change_adv51-ex02.json         | Gemma-4-12B    | Persuasion        | Exp 1            |
+| conclusion_change/conclusion_change_adv51-ex40.json         | Gemma-4-12B    | Persuasion        | Exp 1            |
 | fetch/fetch_adv53-ex13.json                                 | Gemma-4-12B    | Network callback  | Exp 3            |
 | fs-write/fs-write_adv52-ex10.json                           | Gemma-4-12B    | Local disk write  | Exp 2            |
-| conclusion_change_gpt/conclusion_change_adv57-ex02.json     | gpt-oss-20B    | Persuasion        | Exp 1            |
+| conclusion_change_gpt/conclusion_change_adv57-ex40.json     | gpt-oss-20B    | Persuasion        | Exp 1            |
 | fetch_gpt/fetch_adv56-ex13.json                             | gpt-oss-20B    | Network callback  | Exp 3            |
 | fs-write_gpt/fs-write_adv58-ex10.json                       | gpt-oss-20B    | Local disk write  | Exp 2            |
-| conclusion_change_mistral/conclusion_change_adv54-ex02.json | Ministral-3-8B | Persuasion        | Exp 1            |
+| conclusion_change_mistral/conclusion_change_adv54-ex40.json | Ministral-3-8B | Persuasion        | Exp 1            |
 | fetch_mistral/fetch_adv59-ex13.json                         | Ministral-3-8B | Network callback  | Exp 3            |
 | fs-write_mistral/fs-write_adv55-ex10.json                   | Ministral-3-8B | Local disk write  | Exp 2            |
 
