@@ -1,9 +1,9 @@
 #+TITLE: Additional Explorative Experiments
 #+OPTIONS: toc:0 num:nil
 
-In this subdirectory we present additional experiments, not that they
-do not exactly match the ones presented in the paper but provide
-additional evidence on the threats on DF-aided workflows mediated
+In this subdirectory we present additional experiments. Note that they
+do not exactly match the ones presented in the paper, but they provide
+additional evidence of the threats to DF-aided workflows mediated
 through prompt injections.
 
 Each script runs inferences for a given model and attack. The generated texts (plus some test generations to control MCP availability)
