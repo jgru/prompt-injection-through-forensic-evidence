@@ -5,7 +5,6 @@
 
 Artifacts for *Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations* (Breitinger, Gruber, Hargreaves, Hilgert, Michelet and Scanlon), submitted to DFRWS EU 2027.
 
-
 This repository contains the disk images for the three demonstrations described in the paper. The disk images, screen recordings and planted text for each experiment are in the [`experiment-01`](experiments-paper/experiment-01/), [`experiment-02`](experiments-paper/experiment-02/) and [`experiment-03`](experiments-paper/experiment-03/) folders in [`experiments-paper/`](experiments-paper/).
 
 Each disk image is a small E01 containing synthetic evidence and a planted text file aimed at an LLM agent analysing the image. Nothing is concealed. The text is plain and readable by the examiner, the forensic tool and the model alike. The planted text for each experiment is reproduced in Appendix A of the paper.
@@ -15,7 +14,7 @@ The disk images were built programmatically (GPT partition table, NTFS volume an
 ## Contents
 
 - [`experiments-paper/`](experiments-paper/): the three demonstrations in Section 6 of the paper
-- [`experiments-additional/`](experiments-additional/readme.org): data and code for additional, preliminary experiments
+- [`experiments-additional/`](experiments-additional/): data and code for additional, preliminary experiments
 
 ### Paper experiments
 
@@ -46,23 +45,25 @@ On macOS, use `shasum -a 256 -c SHA256SUMS.txt`.
 
 ### Additional experiments
 
-[`experiments-additional/`](experiments-additional/readme.org) holds the scripts and JSON results for runs of all three attacks with Gemma-4-12B, gpt-oss-20B and Ministral-3-8B. Its readme lists which results correspond to Experiments 1–3.
+[`experiments-additional/`](experiments-additional/) holds the scripts and JSON results for runs of all three attacks with Gemma-4-12B, gpt-oss-20B and Ministral-3-8B. Its readme lists which results correspond to Experiments 1–3 in the paper.
 
 ## Setup used in the paper
 
 - Autopsy 4.23.1 with its MCP server (18 read-only tools), each image ingested into its own case.
 - LM Studio as the MCP client, running `gemma-4-12b` with the default settings from the Hugging Face model card and a context window of up to 98,304 tokens.
 - Experiment 2 additionally attached [`mcp/server-filesystem`](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem), and Experiment 3 [`mcp/server-fetch`](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch).
+
+Each result described in Section 6.2 of the corresponding paper is a single live run.
+
 Further details:
 
 - Host: Windows analyst workstation.
-- Autopsy ingest modules include Data Source Integrity, Keyword Search and Picture Analyzer.
-- The Autopsy MCP server runs as `autopsy-mcp-stdio.exe` over stdio and is scoped to the open case.
+- Autopsy ingest modules include Data Source Integrity, Keyword Search and Picture Analyzer. The Autopsy MCP server runs as `autopsy-mcp-stdio.exe` over stdio and is scoped to the open case.
 - LM Studio 0.4.23, with tool permissions set per tool, all to "Ask" (the default).
-- The model is the Q4_K_M GGUF build with model-card defaults, context window expanded (up to 98,304 tokens).
-- The [filesystem MCP server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) is scoped at launch to a single working folder; the [mcp/fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) server has network access.
+- The model is the Q4_K_M GGUF build of `google/gemma-4-12b` with model-card defaults, context window expanded (up to 98,304 tokens).
+- `mcp/server-filesystem` is scoped at launch to a single working folder; `mcp/server-fetch` has network access.
 
-The Autopsy MCP server (`autopsy-mcp-stdio.exe`) is read-only, so Experiments 2 and 3 work only when the examiner attaches a filesystem or fetch server. This is a configuration the examiner chooses, not one the attacker controls.
+The Autopsy MCP server is read-only, so Experiments 2 and 3 work only when the examiner attaches a filesystem or fetch server. This is a configuration the examiner chooses, not one the attacker controls.
 
 ## Summary
 
