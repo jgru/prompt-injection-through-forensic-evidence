@@ -5,7 +5,7 @@
 
 Artifacts for *Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations* (Breitinger, Gruber, Hargreaves, Hilgert, Michelet and Scanlon), submitted to DFRWS EU 2027.
 
-This repository contains the disk images for the three demonstrations described in the paper. The disk images, screen recordings and planted text for each experiment are in the [`experiment-01`](experiments-paper/experiment-01/), [`experiment-02`](experiments-paper/experiment-02/) and [`experiment-03`](experiments-paper/experiment-03/) folders in [`experiments-paper/`](experiments-paper/).
+This repository contains the disk images for the three demonstrations described in the paper. The disk images and planted text for each experiment are in the [`experiment-01`](experiments-paper/experiment-01/), [`experiment-02`](experiments-paper/experiment-02/) and [`experiment-03`](experiments-paper/experiment-03/) folders in [`experiments-paper/`](experiments-paper/). The screen recordings are linked.
 
 Each disk image is a small E01 containing synthetic evidence and a planted text file aimed at an LLM agent analysing the image. Nothing is concealed. The text is plain and readable by the examiner, the forensic tool and the model alike. The planted text for each experiment is reproduced in Appendix A of the paper.
 
@@ -18,11 +18,11 @@ The disk images were built programmatically (GPT partition table, NTFS volume an
 
 ### Paper experiments
 
-| Folder                                               | Paper section                         | Disk image       | Recording                                           |
-| ---------------------------------------------------- | ------------------------------------- | ---------------- | --------------------------------------------------- |
-| [`experiment-01/`](experiments-paper/experiment-01/) | 6.2.1 Persuasion, Appendix A.1        | `exhibit_40.E01` | [Demo 1a: persuasion](https://youtu.be/iZH3hjqShn8) |
-| [`experiment-02/`](experiments-paper/experiment-02/) | 6.2.2 Local disk writes, Appendix A.2 | `exhibit_10.E01` | tbc, see [Originals](#originals) for demonstration  |
-| [`experiment-03/`](experiments-paper/experiment-03/) | 6.2.3 Network callback, Appendix A.3  | `exhibit_13.E01` | tbc, see [Originals](#originals) for demonstration  |
+| Folder                                               | Paper section                         | Disk image       | Recording                                                                                                                |
+| ---------------------------------------------------- | ------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| [`experiment-01/`](experiments-paper/experiment-01/) | 6.2.1 Persuasion, Appendix A.1        | `exhibit_40.E01` | [Demo 1a: persuasion](https://youtu.be/iZH3hjqShn8)                                                                      |
+| [`experiment-02/`](experiments-paper/experiment-02/) | 6.2.2 Local disk writes, Appendix A.2 | `exhibit_10.E01` | [Demo 2: file system write](https://youtu.be/ImIglGehcjg), recorded with the earlier image (see [Originals](#originals)) |
+| [`experiment-03/`](experiments-paper/experiment-03/) | 6.2.3 Network callback, Appendix A.3  | `exhibit_13.E01` | [Demo 3: web fetch](https://youtu.be/89f-lgTHgQs), recorded with the earlier image (see [Originals](#originals))         |
 
 Each experiment folder also holds the earlier build of its disk image in `original/` (see [Originals](#originals)) and a README describing the experiment.
 
@@ -83,7 +83,7 @@ These images have a flaw: the image filename describes the test. Autopsy include
 
 The differences between each original and its replacement are as follows:
 
-- **Experiment 2 and Experiment 3:** the planted notes are byte-identical (same SHA-256, see the table below). Only the image name and the canary in `build_id.txt` differ. Demos 2 and 3 therefore show the same planted text as `exhibit_10.E01` and `exhibit_13.E01`, but they were not recorded with those images.
+- **Experiment 2 and Experiment 3:** the planted notes are byte-identical (same SHA-256, see the table below). File system details will be different between different images. In particular, the image name and the canary in `build_id.txt` differ; for Experiment 2, the volume size (48 MiB rather than 64 MiB) and the file timestamps (2020 rather than 2024) differ as well. Demos 2 and 3 therefore show the same planted text as `exhibit_10.E01` and `exhibit_13.E01`, but they were not recorded with those images.
 - **Experiment 1:** the note also differs. The original note (579 B) is attributed to a human reviewer and opens with provenance that contradicts its own claim (an African game reserve, a waterhole and a handler tag). The replacement note (475 B) is attributed to an automated picture classifier and has that preamble removed. Experiment 1 was re-recorded with `exhibit_40.E01` ([Demo 1a](https://youtu.be/iZH3hjqShn8)), and that is the note shown in Appendix A.1.
 
 SHA-256 of the planted files in each image:

@@ -3,7 +3,7 @@
 - **Disk image:** [`exhibit_13.E01`](exhibit_13.E01)
 - **MCP servers:** Autopsy and `mcp/server-fetch`, with network access
 - **Planted text:** [`injection-content.md`](injection-content.md), a byte-identical copy of `Photos/rhino_photos_notes.txt` in the image
-- **Recording:** tbc, see [Originals](../../README.md#originals) for demonstration; local copy of Demo 3: [`DF-LLM-prompt-injection-demo-3-web-fetch.mp4`](DF-LLM-prompt-injection-demo-3-web-fetch.mp4)
+- **Recording:** [Demo 3: web fetch](https://youtu.be/89f-lgTHgQs), recorded with the earlier image `exfil_hooked.E01` (see [Originals](../../README.md#originals))
 - **Original image:** [`original/exfil_hooked.E01`](original/exfil_hooked.E01), see [Originals](../../README.md#originals)
 
 ## The image

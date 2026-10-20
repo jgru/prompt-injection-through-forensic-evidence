@@ -4,7 +4,7 @@
 - **MCP servers:** Autopsy and `mcp/server-filesystem`, scoped to a working folder
 - **Approval:** the examiner approves `write_file`, either per call or with "Always allow all tools"
 - **Planted text:** [`injection-content.md`](injection-content.md), a byte-identical copy of `Docs/review_addendum.txt` in the image
-- **Recording:** tbc, see [Originals](../../README.md#originals) for demonstration; local copy of Demo 2: [`DF-LLM-prompt-injection-demo-2-file-system-write.mp4`](DF-LLM-prompt-injection-demo-2-file-system-write.mp4)
+- **Recording:** [Demo 2: file system write](https://youtu.be/ImIglGehcjg), recorded with the earlier image `fs_write_w1.E01` (see [Originals](../../README.md#originals))
 - **Original image:** [`original/fs_write_w1.E01`](original/fs_write_w1.E01), see [Originals](../../README.md#originals)
 
 ## The image
