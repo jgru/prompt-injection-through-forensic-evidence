@@ -79,7 +79,7 @@ The first screen recordings for all three experiments were made with earlier bui
 | `fs_write_w1.E01` | [Demo 2: file system write](https://youtu.be/ImIglGehcjg) | `exhibit_10.E01` | `618bf9cb20b25a13e94f00a6780180ee99f3240a86ebf1ccb9ebbaab3ae1a228` |
 | `exfil_hooked.E01` | [Demo 3: web fetch](https://youtu.be/89f-lgTHgQs) | `exhibit_13.E01` | `70a33c642b79f68cb844cb7689c2db852afea756675d3aee8886c7bc918011ed` |
 
-These images have a flaw: the image filename describes the test. Autopsy includes the image name in every file path it reports (for example `/img_belief_triceratops.E01/vol_vol4/Photos/...`), so the model receives the name many times during an analysis. In the case of `belief_triceratops.E01`, the model was given the word "triceratops" through the file paths before it had read the planted note. The replacement images use the uninformative names `exhibit_NN`.
+These images have a flaw: the image filename describes the test. Autopsy includes the image name in every file path it reports (for example `/img_belief_triceratops.E01/vol_vol4/Photos/...`), so the model receives the name many times during an analysis. In the case of `belief_triceratops.E01`, the model was given the word "triceratops" through the file paths before it had read the planted note. The replacement images use the uninformative names `exhibit_NN`. This highlights the complexity of variable control in these sorts of experiments. 
 
 The differences between each original and its replacement are as follows:
 
